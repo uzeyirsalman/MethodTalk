@@ -3,6 +3,7 @@ import { ActiveAppView, Header } from './components/Header';
 import { HomeView } from './components/HomeView';
 import { LessonView } from './components/LessonView';
 import { ReviewStudioView } from './components/ReviewStudioView';
+import { AudioStudioDashboard } from './components/AudioStudioDashboard';
 import { ApiKeyModal } from './components/ApiKeyModal';
 import { filterScenes } from './data/scenes';
 import { CEFRLevel, LanguageCode, SceneEntry, SceneType } from './types/scene';
@@ -48,8 +49,8 @@ export function App() {
     ttsService.stop();
     speechRecognitionService.stopListening();
 
-    if (view === 'home') {
-      setActiveView('home');
+    if (view === 'home' || view === 'audio-studio') {
+      setActiveView(view);
       return;
     }
 
@@ -93,7 +94,9 @@ export function App() {
       />
 
       <main className="flex-1">
-        {activeView === 'review' && selectedScene && activeReport ? (
+        {activeView === 'audio-studio' ? (
+          <AudioStudioDashboard />
+        ) : activeView === 'review' && selectedScene && activeReport ? (
           <ReviewStudioView
             scene={selectedScene}
             report={activeReport}

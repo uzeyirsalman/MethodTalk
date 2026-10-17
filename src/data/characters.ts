@@ -1,11 +1,18 @@
 import { CharacterProfile, LanguageCode } from '../types/scene';
+import customVoicesMap from './customVoices.json';
+
+const storedVoices = customVoicesMap as Record<string, Partial<Record<LanguageCode, string>>>;
+
+function getCustomVoiceId(charId: string, lang: LanguageCode): string | undefined {
+  return storedVoices[charId]?.[lang];
+}
 
 /**
  * TIER 2: SHARED CHARACTER REGISTRY
  * Reusable across multiple scenes from the same movie.
- * Character descriptions (`description`) are strictly for the UI Cast Card.
- * Voice profiles (`voices[lang]`) are anchored per Character + Language to guarantee
- * authentic native pronunciation and identical voice identity across every line.
+ * Every character has:
+ * - A unique customVoiceId per Character + Language created via `POST /v1beta/voices` (Voice Design)
+ * - A unique fallbackPrebuiltVoice so no two characters ever share a voice.
  */
 export const CHARACTER_REGISTRY: Record<string, CharacterProfile> = {
   vito_corleone: {
@@ -23,22 +30,26 @@ export const CHARACTER_REGISTRY: Record<string, CharacterProfile> = {
     voices: {
       en: {
         voiceDesignPrompt:
-          'Native American English male speaker in his late 60s. Deep, raspy, gravelly baritone voice with a subtle New York Italian-American timbre, calm and deliberate pacing, quiet authority.',
+          'A 68-year-old Italian-American patriarch in New York. Deep, raspy, gravelly baritone voice, slow deliberate pacing, hushed and calm paternal authority.',
+        customVoiceId: getCustomVoiceId('vito_corleone', 'en'),
         fallbackPrebuiltVoice: 'Charon',
       },
       ru: {
         voiceDesignPrompt:
-          'Native Russian male dubbing actor in his 60s. Deep, raspy, authoritative baritone with flawless native Russian theatrical diction, slow and measured delivery.',
+          'A 68-year-old Russian mafia patriarch dubbing actor. Deep, raspy, gravelly baritone with flawless native Russian theatrical diction, slow and measured delivery.',
+        customVoiceId: getCustomVoiceId('vito_corleone', 'ru'),
         fallbackPrebuiltVoice: 'Charon',
       },
       de: {
         voiceDesignPrompt:
-          'Native Standard High German (Hochdeutsch) male dubbing actor in his 60s. Deep, gravelly, calm baritone voice with authoritative theatrical warmth.',
+          'A 68-year-old German patriarch dubbing actor speaking Standard High German. Deep, gravelly, calm baritone voice with authoritative theatrical warmth.',
+        customVoiceId: getCustomVoiceId('vito_corleone', 'de'),
         fallbackPrebuiltVoice: 'Charon',
       },
       'pt-PT': {
         voiceDesignPrompt:
-          'Native European Portuguese (Lisbon/Coimbra standard) male voice actor in his 60s. Deep, raspy, calm baritone with clear continental Portuguese phonetics and measured pacing.',
+          'A 68-year-old European Portuguese patriarch from Lisbon. Deep, raspy, calm baritone with clear continental Portuguese phonetics and slow, measured pacing.',
+        customVoiceId: getCustomVoiceId('vito_corleone', 'pt-PT'),
         fallbackPrebuiltVoice: 'Charon',
       },
     },
@@ -59,22 +70,26 @@ export const CHARACTER_REGISTRY: Record<string, CharacterProfile> = {
     voices: {
       en: {
         voiceDesignPrompt:
-          'Native American English male speaker in his late 30s. Smooth mid-tenor voice, emotional, pleading, slightly breathless and anxious.',
+          'A 38-year-old classic crooner and actor in 1940s America. Smooth, emotional mid-tenor voice, pleading, anxious, and slightly breathless.',
+        customVoiceId: getCustomVoiceId('johnny_fontane', 'en'),
         fallbackPrebuiltVoice: 'Puck',
       },
       ru: {
         voiceDesignPrompt:
-          'Native Russian male dubbing actor in his late 30s. Expressive mid-tenor voice, emotional and pleading delivery with clean native Russian pronunciation.',
+          'A 38-year-old Russian male singer and actor. Expressive, emotional mid-tenor voice, pleading delivery with clean native Russian pronunciation.',
+        customVoiceId: getCustomVoiceId('johnny_fontane', 'ru'),
         fallbackPrebuiltVoice: 'Puck',
       },
       de: {
         voiceDesignPrompt:
-          'Native Standard High German male dubbing actor in his late 30s. Expressive mid-tenor voice, anxious and pleading tone.',
+          'A 38-year-old German singer and actor speaking Standard High German. Expressive mid-tenor voice, anxious and pleading tone.',
+        customVoiceId: getCustomVoiceId('johnny_fontane', 'de'),
         fallbackPrebuiltVoice: 'Puck',
       },
       'pt-PT': {
         voiceDesignPrompt:
-          'Native European Portuguese male voice actor in his late 30s. Expressive mid-tenor voice, emotional and pleading delivery with continental Portuguese pronunciation.',
+          'A 38-year-old European Portuguese singer and actor. Expressive mid-tenor voice, emotional and pleading delivery with continental Portuguese pronunciation.',
+        customVoiceId: getCustomVoiceId('johnny_fontane', 'pt-PT'),
         fallbackPrebuiltVoice: 'Puck',
       },
     },
@@ -95,22 +110,26 @@ export const CHARACTER_REGISTRY: Record<string, CharacterProfile> = {
     voices: {
       en: {
         voiceDesignPrompt:
-          'Native American English male speaker in his 40s. Rich, resonant, velvety bass-baritone voice. Calm, philosophical, hypnotic cadence with crisp articulation.',
+          'A 42-year-old American philosophical mentor. Rich, resonant, velvety bass-baritone voice. Calm, hypnotic cadence with crisp articulation.',
+        customVoiceId: getCustomVoiceId('morpheus', 'en'),
         fallbackPrebuiltVoice: 'Orus',
       },
       ru: {
         voiceDesignPrompt:
-          'Native Russian male dubbing actor in his 40s. Deep, resonant, velvety bass-baritone voice with calm, philosophical, hypnotic delivery.',
+          'A 42-year-old Russian philosophical mentor. Deep, resonant, velvety bass-baritone voice with calm, hypnotic native Russian delivery.',
+        customVoiceId: getCustomVoiceId('morpheus', 'ru'),
         fallbackPrebuiltVoice: 'Orus',
       },
       de: {
         voiceDesignPrompt:
-          'Native Standard High German male dubbing actor in his 40s. Deep, resonant, velvety baritone voice (in the style of Tom Vogt), calm and enigmatic.',
+          'A 42-year-old German philosophical mentor speaking Standard High German. Deep, resonant, velvety baritone voice, calm and enigmatic.',
+        customVoiceId: getCustomVoiceId('morpheus', 'de'),
         fallbackPrebuiltVoice: 'Orus',
       },
       'pt-PT': {
         voiceDesignPrompt:
-          'Native European Portuguese male voice actor in his 40s. Deep, resonant bass-baritone voice with calm, philosophical continental Portuguese diction.',
+          'A 42-year-old European Portuguese philosophical mentor. Deep, resonant, velvety bass-baritone voice with calm, hypnotic continental Portuguese diction.',
+        customVoiceId: getCustomVoiceId('morpheus', 'pt-PT'),
         fallbackPrebuiltVoice: 'Orus',
       },
     },
@@ -131,23 +150,27 @@ export const CHARACTER_REGISTRY: Record<string, CharacterProfile> = {
     voices: {
       en: {
         voiceDesignPrompt:
-          'Native American English male speaker in his early 30s. Clear, understated mid-baritone voice, slightly breathless, curious and earnest.',
-        fallbackPrebuiltVoice: 'Puck',
+          'A 32-year-old American computer hacker. Clear, understated, calm young male baritone voice, earnest, curious, and slightly hushed.',
+        customVoiceId: getCustomVoiceId('neo', 'en'),
+        fallbackPrebuiltVoice: 'Enceladus',
       },
       ru: {
         voiceDesignPrompt:
-          'Native Russian male dubbing actor in his early 30s. Clear, earnest young adult baritone voice, thoughtful and slightly cautious.',
-        fallbackPrebuiltVoice: 'Puck',
+          'A 32-year-old Russian computer hacker. Clear, earnest young adult male baritone voice, thoughtful and slightly cautious.',
+        customVoiceId: getCustomVoiceId('neo', 'ru'),
+        fallbackPrebuiltVoice: 'Enceladus',
       },
       de: {
         voiceDesignPrompt:
-          'Native Standard High German male dubbing actor in his early 30s. Clear, earnest young adult baritone voice, understated and curious.',
-        fallbackPrebuiltVoice: 'Puck',
+          'A 32-year-old German computer hacker speaking Standard High German. Clear, earnest young adult male baritone voice, understated and curious.',
+        customVoiceId: getCustomVoiceId('neo', 'de'),
+        fallbackPrebuiltVoice: 'Enceladus',
       },
       'pt-PT': {
         voiceDesignPrompt:
-          'Native European Portuguese male voice actor in his early 30s. Clear, earnest young adult voice with authentic continental Portuguese pronunciation.',
-        fallbackPrebuiltVoice: 'Puck',
+          'A 32-year-old European Portuguese computer hacker. Clear, understated young adult male baritone voice with authentic continental Portuguese pronunciation.',
+        customVoiceId: getCustomVoiceId('neo', 'pt-PT'),
+        fallbackPrebuiltVoice: 'Enceladus',
       },
     },
   },
@@ -167,22 +190,26 @@ export const CHARACTER_REGISTRY: Record<string, CharacterProfile> = {
     voices: {
       en: {
         voiceDesignPrompt:
-          'Native American English male speaker in his 40s. Commanding, dynamic, deeply expressive baritone voice with sharp rhythmic cadence and intense dramatic presence.',
+          'A 45-year-old charismatic American enforcer. Commanding, dynamic, deeply expressive baritone voice with sharp rhythmic cadence and intense dramatic presence.',
+        customVoiceId: getCustomVoiceId('jules_winnfield', 'en'),
         fallbackPrebuiltVoice: 'Fenrir',
       },
       ru: {
         voiceDesignPrompt:
-          'Native Russian male dubbing actor in his 40s. Powerful, charismatic, commanding baritone voice with dynamic theatrical energy and crisp Russian diction.',
+          'A 45-year-old charismatic Russian enforcer. Powerful, commanding baritone voice with dynamic theatrical energy and crisp Russian diction.',
+        customVoiceId: getCustomVoiceId('jules_winnfield', 'ru'),
         fallbackPrebuiltVoice: 'Fenrir',
       },
       de: {
         voiceDesignPrompt:
-          'Native Standard High German male dubbing actor in his 40s. Commanding, energetic, intense baritone voice with sharp rhythmic delivery.',
+          'A 45-year-old charismatic German enforcer speaking Standard High German. Commanding, energetic, intense baritone voice with sharp rhythmic delivery.',
+        customVoiceId: getCustomVoiceId('jules_winnfield', 'de'),
         fallbackPrebuiltVoice: 'Fenrir',
       },
       'pt-PT': {
         voiceDesignPrompt:
-          'Native European Portuguese male voice actor in his 40s. Commanding, intense, charismatic baritone voice with sharp continental Portuguese articulation.',
+          'A 45-year-old charismatic European Portuguese enforcer. Commanding, intense baritone voice with sharp continental Portuguese articulation.',
+        customVoiceId: getCustomVoiceId('jules_winnfield', 'pt-PT'),
         fallbackPrebuiltVoice: 'Fenrir',
       },
     },
@@ -203,23 +230,27 @@ export const CHARACTER_REGISTRY: Record<string, CharacterProfile> = {
     voices: {
       en: {
         voiceDesignPrompt:
-          'Native American English male speaker in his late 20s. High-strung, polite but trembling tenor voice, nervous and hesitant.',
-        fallbackPrebuiltVoice: 'Puck',
+          'A 26-year-old nervous young American man. High-strung, polite, slightly trembling light tenor voice, hesitant and intimidated.',
+        customVoiceId: getCustomVoiceId('brett', 'en'),
+        fallbackPrebuiltVoice: 'Iapetus',
       },
       ru: {
         voiceDesignPrompt:
-          'Native Russian male dubbing actor in his late 20s. Nervous, polite, slightly trembling tenor voice with clean native Russian pronunciation.',
-        fallbackPrebuiltVoice: 'Puck',
+          'A 26-year-old nervous young Russian man. Polite, slightly trembling light tenor voice with clean native Russian pronunciation.',
+        customVoiceId: getCustomVoiceId('brett', 'ru'),
+        fallbackPrebuiltVoice: 'Iapetus',
       },
       de: {
         voiceDesignPrompt:
-          'Native Standard High German male dubbing actor in his late 20s. Nervous, hesitant tenor voice.',
-        fallbackPrebuiltVoice: 'Puck',
+          'A 26-year-old nervous young German man speaking Standard High German. Hesitant, polite light tenor voice.',
+        customVoiceId: getCustomVoiceId('brett', 'de'),
+        fallbackPrebuiltVoice: 'Iapetus',
       },
       'pt-PT': {
         voiceDesignPrompt:
-          'Native European Portuguese male voice actor in his late 20s. Nervous, hesitant tenor voice with continental Portuguese pronunciation.',
-        fallbackPrebuiltVoice: 'Puck',
+          'A 26-year-old nervous young European Portuguese man. Hesitant, polite light tenor voice with continental Portuguese pronunciation.',
+        customVoiceId: getCustomVoiceId('brett', 'pt-PT'),
+        fallbackPrebuiltVoice: 'Iapetus',
       },
     },
   },
@@ -239,23 +270,27 @@ export const CHARACTER_REGISTRY: Record<string, CharacterProfile> = {
     voices: {
       en: {
         voiceDesignPrompt:
-          'Native English male speaker in his 40s. Noble, weathered, resonant baritone voice with heroic conviction, rising from empathetic brotherhood to a ringing battlefield rallying cry.',
-        fallbackPrebuiltVoice: 'Fenrir',
+          'A 42-year-old noble warrior king speaking British-tinged heroic English. Weathered, resonant baritone voice with passionate conviction and inspiring battlefield projection.',
+        customVoiceId: getCustomVoiceId('aragorn', 'en'),
+        fallbackPrebuiltVoice: 'Schedar',
       },
       ru: {
         voiceDesignPrompt:
-          'Native Russian male dubbing actor in his 40s. Noble, heroic, resonant baritone voice with epic theatrical power and crystal-clear Russian diction.',
-        fallbackPrebuiltVoice: 'Fenrir',
+          'A 42-year-old noble warrior king speaking Russian. Heroic, resonant baritone voice with epic theatrical power and crystal-clear Russian diction.',
+        customVoiceId: getCustomVoiceId('aragorn', 'ru'),
+        fallbackPrebuiltVoice: 'Schedar',
       },
       de: {
         voiceDesignPrompt:
-          'Native Standard High German male dubbing actor in his 40s. Noble, heroic baritone voice with passionate, inspiring battlefield delivery.',
-        fallbackPrebuiltVoice: 'Fenrir',
+          'A 42-year-old noble warrior king speaking Standard High German. Heroic baritone voice with passionate, inspiring battlefield delivery.',
+        customVoiceId: getCustomVoiceId('aragorn', 'de'),
+        fallbackPrebuiltVoice: 'Schedar',
       },
       'pt-PT': {
         voiceDesignPrompt:
-          'Native European Portuguese male voice actor in his 40s. Noble, heroic, resonant baritone voice with inspiring continental Portuguese delivery.',
-        fallbackPrebuiltVoice: 'Fenrir',
+          'A 42-year-old noble warrior king speaking European Portuguese. Heroic, resonant baritone voice with inspiring continental Portuguese delivery.',
+        customVoiceId: getCustomVoiceId('aragorn', 'pt-PT'),
+        fallbackPrebuiltVoice: 'Schedar',
       },
     },
   },
@@ -275,23 +310,27 @@ export const CHARACTER_REGISTRY: Record<string, CharacterProfile> = {
     voices: {
       en: {
         voiceDesignPrompt:
-          'Native British English male speaker in his 70s. Warm, gentle, wise, slightly raspy elderly baritone voice with grand theatrical charm and a twinkle of humor.',
-        fallbackPrebuiltVoice: 'Charon',
+          'A 75-year-old British headmaster and wizard. Warm, gentle, wise, slightly raspy elderly baritone voice with grand theatrical charm and a twinkle of humor.',
+        customVoiceId: getCustomVoiceId('albus_dumbledore', 'en'),
+        fallbackPrebuiltVoice: 'Algieba',
       },
       ru: {
         voiceDesignPrompt:
-          'Native Russian male dubbing actor in his 70s. Warm, wise, gentle elderly baritone voice with classic fairy-tale grandeur and clear Russian pronunciation.',
-        fallbackPrebuiltVoice: 'Charon',
+          'A 75-year-old wise Russian headmaster. Warm, gentle elderly baritone voice with classic fairy-tale grandeur and clear Russian pronunciation.',
+        customVoiceId: getCustomVoiceId('albus_dumbledore', 'ru'),
+        fallbackPrebuiltVoice: 'Algieba',
       },
       de: {
         voiceDesignPrompt:
-          'Native Standard High German male dubbing actor in his 70s. Warm, wise, gentle elderly baritone voice with dignified theatrical presence.',
-        fallbackPrebuiltVoice: 'Charon',
+          'A 75-year-old wise German headmaster speaking Standard High German. Warm, gentle elderly baritone voice with dignified theatrical presence.',
+        customVoiceId: getCustomVoiceId('albus_dumbledore', 'de'),
+        fallbackPrebuiltVoice: 'Algieba',
       },
       'pt-PT': {
         voiceDesignPrompt:
-          'Native European Portuguese male voice actor in his 70s. Warm, wise, gentle elderly baritone voice with classic continental Portuguese pronunciation.',
-        fallbackPrebuiltVoice: 'Charon',
+          'A 75-year-old wise European Portuguese headmaster. Warm, gentle elderly baritone voice with classic continental Portuguese pronunciation.',
+        customVoiceId: getCustomVoiceId('albus_dumbledore', 'pt-PT'),
+        fallbackPrebuiltVoice: 'Algieba',
       },
     },
   },

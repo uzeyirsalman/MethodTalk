@@ -1,0 +1,47 @@
+{
+  "vito_corleone": {
+    "pt-PT": "voice_yvcupty7cedi",
+    "en": "voice_4904j8dgnms9",
+    "ru": "voice_nww6rmobdz1h",
+    "de": "voice_6mdikgtz7x5i"
+  },
+  "johnny_fontane": {
+    "pt-PT": "voice_g4hvelcmkcbv",
+    "en": "voice_jrqjjem5nrqt",
+    "ru": "voice_ynld8atqagit",
+    "de": "voice_uoo6b2vb0ytv"
+  },
+  "morpheus": {
+    "pt-PT": "voice_keno1zrb0713",
+    "en": "voice_lcamqelcbtvu",
+    "ru": "voice_x6v0f7fmu7xv",
+    "de": "voice_89jlxwsojvub"
+  },
+  "neo": {
+    "pt-PT": "voice_f3t1kwxl5ow6",
+    "en": "voice_3nm6afp5o74w",
+    "ru": "voice_eknmrwiekvyq",
+    "de": "voice_smyytgmy3juw"
+  },
+  "jules_winnfield": {
+    "pt-PT": "voice_rdlh2kjbo6j9",
+    "ru": "voice_ezoezjp7qnng"
+  },
+  "brett": {
+    "pt-PT": "voice_saoi4xedzkrx",
+    "en": "voice_r8vb34iharev",
+    "ru": "voice_isnbq54e5bha",
+    "de": "voice_ba9hp3gfw2v5"
+  },
+  "aragorn": {
+    "pt-PT": "voice_6dxcdpcv66jx",
+    "en": "voice_da4hj3l0dmck",
+    "ru": "voice_ox6o9pg9yltp",
+    "de": "voice_afsl46tksi0v"
+  },
+  "albus_dumbledore": {
+    "pt-PT": "voice_nuqj6mzmcvgi",
+    "en": "voice_zqmc7d3kow9h",
+    "ru": "voice_eh2i2k7t05sm"
+  }
+}

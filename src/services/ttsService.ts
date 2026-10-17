@@ -203,9 +203,13 @@ class TTSService {
   ): Promise<string | null> {
     try {
       const voiceProfile = character.voices[language];
-      const voiceConfigPayload = voiceProfile.customVoiceId
-        ? { customVoiceConfig: { voiceId: voiceProfile.customVoiceId } }
-        : { prebuiltVoiceConfig: { voiceName: voiceProfile.fallbackPrebuiltVoice || 'Charon' } };
+      const voiceConfigPayload = voiceProfile.customVoiceId?.startsWith('voice_')
+        ? { voice: voiceProfile.customVoiceId }
+        : {
+            prebuiltVoiceConfig: {
+              voiceName: voiceProfile.fallbackPrebuiltVoice || 'Charon',
+            },
+          };
 
       const response = await fetch(
         `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash-tts:generateContent?key=${apiKey}`,
@@ -215,6 +219,7 @@ class TTSService {
           body: JSON.stringify({
             contents: [
               {
+                role: 'user',
                 parts: [
                   {
                     // STRICT ISOLATION: Only the verbatim dialogue line is sent!

@@ -1,12 +1,29 @@
 import React from 'react';
-import { Search } from 'lucide-react';
+import { Search, Volume2 } from 'lucide-react';
 import {
   CEFRLevel,
   LanguageCode,
   SceneEntry,
   SceneType,
+  SUPPORTED_LANGUAGES,
 } from '../types/scene';
 import { getSceneCharacters } from '../data/characters';
+import audioManifestData from '../data/audioManifest.json';
+
+const audioManifest = audioManifestData as Record<
+  string,
+  Record<
+    LanguageCode,
+    {
+      voicedLines: string[];
+      verifiedLines?: string[];
+      legacyLines?: string[];
+      totalLines: number;
+      isComplete: boolean;
+      isVerifiedComplete?: boolean;
+    }
+  >
+>;
 
 interface HomeViewProps {
   scenes: SceneEntry[];
@@ -113,6 +130,14 @@ export const HomeView: React.FC<HomeViewProps> = ({
           {scenes.map((scene) => {
             const { metadata, lines } = scene;
             const cast = getSceneCharacters(scene.characterIds);
+            const sceneAudio = audioManifest[metadata.id]?.[targetLanguage];
+            const verifiedCount = sceneAudio?.verifiedLines?.length ?? 0;
+            const legacyCount = sceneAudio?.legacyLines?.length ?? 0;
+            const voicedCount = sceneAudio?.voicedLines?.length ?? 0;
+            const totalLinesCount = lines.length;
+            const isVerifiedComplete =
+              verifiedCount === totalLinesCount && totalLinesCount > 0;
+            const hasAnyAudio = voicedCount > 0;
 
             return (
               <div
@@ -121,15 +146,34 @@ export const HomeView: React.FC<HomeViewProps> = ({
                 className="group cursor-pointer rounded-2xl border border-stone-200/90 hover:border-[#9A3412]/60 bg-white p-5 transition-all hover:shadow-md flex flex-col justify-between gap-4"
               >
                 <div className="space-y-2.5">
-                  {/* Top Meta Row: CEFR Badge + Format + Year */}
-                  <div className="flex items-center justify-between text-xs">
-                    <div className="flex items-center gap-2">
+                  {/* Top Meta Row: CEFR Badge + Format + Voiced Status + Year */}
+                  <div className="flex items-center justify-between text-xs gap-2 flex-wrap">
+                    <div className="flex items-center gap-2 flex-wrap">
                       <span className="px-2 py-0.5 rounded-md font-bold bg-amber-100 text-[#9A3412]">
                         {metadata.cefrLevel}
                       </span>
                       <span className="text-stone-500 font-medium">
                         {metadata.sceneType === 'dialogue' ? 'Dialogue' : 'Monologue'} &bull;{' '}
                         {lines.length} Lines
+                      </span>
+                      <span
+                        title={`Custom voice: ${verifiedCount}/${totalLinesCount} | Legacy prebuilt voice: ${legacyCount}/${totalLinesCount}`}
+                        className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-md font-semibold ${
+                          isVerifiedComplete
+                            ? 'bg-emerald-100 text-emerald-800 border border-emerald-200'
+                            : hasAnyAudio
+                            ? 'bg-amber-50 text-amber-800 border border-amber-200'
+                            : 'bg-stone-100 text-stone-500'
+                        }`}
+                      >
+                        <Volume2 className="w-3 h-3" />
+                        {isVerifiedComplete
+                          ? `Custom Voiced (${verifiedCount}/${totalLinesCount})`
+                          : verifiedCount > 0
+                          ? `Custom (${verifiedCount}/${totalLinesCount})`
+                          : legacyCount > 0
+                          ? `Legacy Voice (${legacyCount}/${totalLinesCount})`
+                          : `0/${totalLinesCount} Voiced`}
                       </span>
                     </div>
                     <span className="text-stone-400 font-medium">{metadata.releaseYear}</span>
@@ -154,14 +198,39 @@ export const HomeView: React.FC<HomeViewProps> = ({
                   </p>
                 </div>
 
-                {/* Minimal Card Footer: Cast Names + Practice Link */}
-                <div className="flex items-center justify-between pt-3 border-t border-stone-100 text-xs">
-                  <span className="text-stone-500 truncate pr-2">
+                {/* Minimal Card Footer: Cast Names + Voiced Lang Pills + Practice Link */}
+                <div className="flex items-center justify-between pt-3 border-t border-stone-100 text-xs gap-2">
+                  <span className="text-stone-500 truncate pr-1">
                     {cast.map((c) => `${c.avatarEmoji} ${c.name}`).join(' · ')}
                   </span>
-                  <span className="font-bold text-[#9A3412] shrink-0 group-hover:translate-x-0.5 transition-transform">
-                    Practice &rarr;
-                  </span>
+                  <div className="flex items-center gap-2 shrink-0">
+                    <div className="flex items-center gap-1" title="Voiced status across languages">
+                      {SUPPORTED_LANGUAGES.map((lang) => {
+                        const langManifest = audioManifest[metadata.id]?.[lang.code];
+                        const vCount = langManifest?.verifiedLines?.length ?? 0;
+                        const lCount = langManifest?.legacyLines?.length ?? 0;
+                        const verifiedAll = langManifest?.isVerifiedComplete ?? false;
+                        return (
+                          <span
+                            key={lang.code}
+                            title={`${lang.name}: ${vCount} custom voiced, ${lCount} legacy voiced / ${lines.length} lines`}
+                            className={`px-1.5 py-0.5 rounded text-[10px] font-bold uppercase ${
+                              verifiedAll
+                                ? 'bg-emerald-100 text-emerald-800'
+                                : vCount > 0 || lCount > 0
+                                ? 'bg-amber-100 text-amber-800'
+                                : 'bg-stone-100 text-stone-400'
+                            }`}
+                          >
+                            {lang.code === 'pt-PT' ? 'PT' : lang.code.toUpperCase()}
+                          </span>
+                        );
+                      })}
+                    </div>
+                    <span className="font-bold text-[#9A3412] group-hover:translate-x-0.5 transition-transform">
+                      Practice &rarr;
+                    </span>
+                  </div>
                 </div>
               </div>
             );

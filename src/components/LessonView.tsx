@@ -21,6 +21,23 @@ import { getCharacterById, getSceneCharacters } from '../data/characters';
 import { ttsService } from '../services/ttsService';
 import { speechRecognitionService } from '../services/speechRecognitionService';
 import { compileDebriefReport, evaluateLineSpeech } from '../services/geminiAudioService';
+import audioManifestData from '../data/audioManifest.json';
+
+const audioManifest = audioManifestData as Record<
+  string,
+  Record<
+    LanguageCode,
+    {
+      voicedLines: string[];
+      verifiedLines?: string[];
+      legacyLines?: string[];
+      totalLines: number;
+      isComplete: boolean;
+      isVerifiedComplete?: boolean;
+      lineRecords?: Record<string, { status: 'verified' | 'legacy_voice' | 'missing'; voiceId: string }>;
+    }
+  >
+>;
 
 export type LessonMode = 'study' | 'roleplay' | 'shadowing';
 
@@ -364,6 +381,13 @@ export const LessonView: React.FC<LessonViewProps> = ({
     onOpenReview(report);
   };
 
+  const sceneLangManifest = audioManifest[metadata.id]?.[targetLanguage];
+  const verifiedLineSet = new Set(sceneLangManifest?.verifiedLines ?? []);
+  const legacyLineSet = new Set(sceneLangManifest?.legacyLines ?? []);
+  const voicedLineSet = new Set(sceneLangManifest?.voicedLines ?? []);
+  const verifiedCount = verifiedLineSet.size;
+  const legacyCount = legacyLineSet.size;
+
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 py-5 space-y-4">
       {/* Clean Scene Title Heading */}
@@ -377,6 +401,25 @@ export const LessonView: React.FC<LessonViewProps> = ({
           </h1>
           <span className="text-xs sm:text-sm text-stone-500">
             &mdash; {metadata.sceneTitle[targetLanguage]}
+          </span>
+          <span
+            title={`Custom voice: ${verifiedCount}/${lines.length} | Legacy prebuilt voice: ${legacyCount}/${lines.length}`}
+            className={`inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-semibold ${
+              verifiedCount === lines.length
+                ? 'bg-emerald-100 text-emerald-800'
+                : verifiedCount > 0 || legacyCount > 0
+                ? 'bg-amber-100 text-amber-800'
+                : 'bg-stone-100 text-stone-500'
+            }`}
+          >
+            <Volume2 className="w-3 h-3" />
+            {verifiedCount === lines.length
+              ? `${verifiedCount}/${lines.length} Custom Voiced`
+              : verifiedCount > 0
+              ? `${verifiedCount}/${lines.length} Custom Voiced`
+              : legacyCount > 0
+              ? `${legacyCount}/${lines.length} Legacy Voiced`
+              : `0/${lines.length} Voiced`}
           </span>
         </div>
 
@@ -654,10 +697,22 @@ export const LessonView: React.FC<LessonViewProps> = ({
                       e.stopPropagation();
                       handlePlaySingleLine(index);
                     }}
-                    title="Listen to line"
-                    className="p-1.5 rounded-lg bg-[#F3EFEA] hover:bg-stone-200/80 text-stone-700 transition-colors"
+                    title={
+                      voicedLineSet.has(line.lineId)
+                        ? `Listen to custom character voice (${character.name})`
+                        : 'Listen to line (live TTS fallback)'
+                    }
+                    className={`p-1.5 rounded-lg transition-colors ${
+                      voicedLineSet.has(line.lineId)
+                        ? 'bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200/80'
+                        : 'bg-[#F3EFEA] hover:bg-stone-200/80 text-stone-700'
+                    }`}
                   >
-                    <Volume2 className="w-3.5 h-3.5 text-[#9A3412]" />
+                    <Volume2
+                      className={`w-3.5 h-3.5 ${
+                        voicedLineSet.has(line.lineId) ? 'text-emerald-700' : 'text-[#9A3412]'
+                      }`}
+                    />
                   </button>
 
                   {!isSessionRunning && isUserPracticeable && (

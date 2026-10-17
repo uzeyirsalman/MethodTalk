@@ -1,0 +1,1394 @@
+{
+  "godfather-offer": {
+    "pt-PT": {
+      "voicedLines": [
+        "gf_01",
+        "gf_02",
+        "gf_03",
+        "gf_04",
+        "gf_05",
+        "gf_06",
+        "gf_07",
+        "gf_08",
+        "gf_09",
+        "gf_10"
+      ],
+      "verifiedLines": [],
+      "legacyLines": [
+        "gf_01",
+        "gf_02",
+        "gf_03",
+        "gf_04",
+        "gf_05",
+        "gf_06",
+        "gf_07",
+        "gf_08",
+        "gf_09",
+        "gf_10"
+      ],
+      "totalLines": 10,
+      "isComplete": true,
+      "isVerifiedComplete": false,
+      "lineRecords": {
+        "gf_01": {
+          "status": "legacy_voice",
+          "voiceId": "prebuilt:Puck",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "gf_02": {
+          "status": "legacy_voice",
+          "voiceId": "prebuilt:Puck",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "gf_03": {
+          "status": "legacy_voice",
+          "voiceId": "prebuilt:Charon",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "gf_04": {
+          "status": "legacy_voice",
+          "voiceId": "prebuilt:Charon",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "gf_05": {
+          "status": "legacy_voice",
+          "voiceId": "prebuilt:Puck",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "gf_06": {
+          "status": "legacy_voice",
+          "voiceId": "prebuilt:Charon",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "gf_07": {
+          "status": "legacy_voice",
+          "voiceId": "prebuilt:Charon",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "gf_08": {
+          "status": "legacy_voice",
+          "voiceId": "prebuilt:Charon",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "gf_09": {
+          "status": "legacy_voice",
+          "voiceId": "prebuilt:Puck",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "gf_10": {
+          "status": "legacy_voice",
+          "voiceId": "prebuilt:Charon",
+          "model": "gemini-3.8-flash-tts"
+        }
+      }
+    },
+    "en": {
+      "voicedLines": [],
+      "verifiedLines": [],
+      "legacyLines": [],
+      "totalLines": 10,
+      "isComplete": false,
+      "isVerifiedComplete": false,
+      "lineRecords": {
+        "gf_01": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "gf_02": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "gf_03": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "gf_04": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "gf_05": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "gf_06": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "gf_07": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "gf_08": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "gf_09": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "gf_10": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        }
+      }
+    },
+    "ru": {
+      "voicedLines": [],
+      "verifiedLines": [],
+      "legacyLines": [],
+      "totalLines": 10,
+      "isComplete": false,
+      "isVerifiedComplete": false,
+      "lineRecords": {
+        "gf_01": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "gf_02": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "gf_03": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "gf_04": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "gf_05": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "gf_06": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "gf_07": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "gf_08": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "gf_09": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "gf_10": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        }
+      }
+    },
+    "de": {
+      "voicedLines": [],
+      "verifiedLines": [],
+      "legacyLines": [],
+      "totalLines": 10,
+      "isComplete": false,
+      "isVerifiedComplete": false,
+      "lineRecords": {
+        "gf_01": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "gf_02": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "gf_03": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "gf_04": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "gf_05": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "gf_06": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "gf_07": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "gf_08": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "gf_09": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "gf_10": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        }
+      }
+    }
+  },
+  "matrix-red-pill": {
+    "pt-PT": {
+      "voicedLines": [
+        "mx_01",
+        "mx_02",
+        "mx_03",
+        "mx_04",
+        "mx_05",
+        "mx_06",
+        "mx_07",
+        "mx_08",
+        "mx_09",
+        "mx_10"
+      ],
+      "verifiedLines": [
+        "mx_01",
+        "mx_02",
+        "mx_03",
+        "mx_04",
+        "mx_05",
+        "mx_06",
+        "mx_07",
+        "mx_08",
+        "mx_09",
+        "mx_10"
+      ],
+      "legacyLines": [],
+      "totalLines": 10,
+      "isComplete": true,
+      "isVerifiedComplete": true,
+      "lineRecords": {
+        "mx_01": {
+          "status": "verified",
+          "voiceId": "voice_keno1zrb0713",
+          "model": "gemini-3.8-flash-tts",
+          "durationSec": 7.74,
+          "charsPerSec": 10.1,
+          "updatedAt": "2026-10-17T17:06:33.781Z"
+        },
+        "mx_02": {
+          "status": "verified",
+          "voiceId": "voice_f3t1kwxl5ow6",
+          "model": "gemini-3.8-flash-tts",
+          "durationSec": 1.96,
+          "charsPerSec": 12.2,
+          "updatedAt": "2026-10-17T17:07:20.411Z"
+        },
+        "mx_03": {
+          "status": "verified",
+          "voiceId": "voice_keno1zrb0713",
+          "model": "gemini-3.8-flash-tts",
+          "durationSec": 6.46,
+          "charsPerSec": 8.4,
+          "updatedAt": "2026-10-17T17:06:33.781Z"
+        },
+        "mx_04": {
+          "status": "verified",
+          "voiceId": "voice_keno1zrb0713",
+          "model": "gemini-3.8-flash-tts",
+          "durationSec": 8.5,
+          "charsPerSec": 13.9,
+          "updatedAt": "2026-10-17T17:06:33.781Z"
+        },
+        "mx_05": {
+          "status": "verified",
+          "voiceId": "voice_keno1zrb0713",
+          "model": "gemini-3.8-flash-tts",
+          "durationSec": 10.74,
+          "charsPerSec": 12.2,
+          "updatedAt": "2026-10-17T17:06:33.781Z"
+        },
+        "mx_06": {
+          "status": "verified",
+          "voiceId": "voice_keno1zrb0713",
+          "model": "gemini-3.8-flash-tts",
+          "durationSec": 7.36,
+          "charsPerSec": 13.7,
+          "updatedAt": "2026-10-17T17:06:33.782Z"
+        },
+        "mx_07": {
+          "status": "verified",
+          "voiceId": "voice_f3t1kwxl5ow6",
+          "model": "gemini-3.8-flash-tts",
+          "durationSec": 9.56,
+          "charsPerSec": 3.7,
+          "updatedAt": "2026-10-17T17:07:20.411Z"
+        },
+        "mx_08": {
+          "status": "verified",
+          "voiceId": "voice_keno1zrb0713",
+          "model": "gemini-3.8-flash-tts",
+          "durationSec": 13.5,
+          "charsPerSec": 12.1,
+          "updatedAt": "2026-10-17T17:06:33.782Z"
+        },
+        "mx_09": {
+          "status": "verified",
+          "voiceId": "voice_keno1zrb0713",
+          "model": "gemini-3.8-flash-tts",
+          "durationSec": 13.18,
+          "charsPerSec": 12.9,
+          "updatedAt": "2026-10-17T17:06:33.782Z"
+        },
+        "mx_10": {
+          "status": "verified",
+          "voiceId": "voice_keno1zrb0713",
+          "model": "gemini-3.8-flash-tts",
+          "durationSec": 14.2,
+          "charsPerSec": 11.6,
+          "updatedAt": "2026-10-17T17:06:33.782Z"
+        }
+      }
+    },
+    "en": {
+      "voicedLines": [
+        "mx_01",
+        "mx_02",
+        "mx_03",
+        "mx_04",
+        "mx_05",
+        "mx_06",
+        "mx_07",
+        "mx_08",
+        "mx_09",
+        "mx_10"
+      ],
+      "verifiedLines": [
+        "mx_01",
+        "mx_02",
+        "mx_03",
+        "mx_04",
+        "mx_05",
+        "mx_06",
+        "mx_07",
+        "mx_08",
+        "mx_09",
+        "mx_10"
+      ],
+      "legacyLines": [],
+      "totalLines": 10,
+      "isComplete": true,
+      "isVerifiedComplete": true,
+      "lineRecords": {
+        "mx_01": {
+          "status": "verified",
+          "voiceId": "voice_lcamqelcbtvu",
+          "model": "gemini-3.8-flash-tts",
+          "durationSec": 8.22,
+          "charsPerSec": 8.2,
+          "updatedAt": "2026-10-17T17:12:36.079Z"
+        },
+        "mx_02": {
+          "status": "verified",
+          "voiceId": "voice_3nm6afp5o74w",
+          "model": "gemini-3.8-flash-tts",
+          "durationSec": 1.16,
+          "charsPerSec": 22.4,
+          "updatedAt": "2026-10-17T17:12:47.572Z"
+        },
+        "mx_03": {
+          "status": "verified",
+          "voiceId": "voice_lcamqelcbtvu",
+          "model": "gemini-3.8-flash-tts",
+          "durationSec": 6.18,
+          "charsPerSec": 6.6,
+          "updatedAt": "2026-10-17T17:12:36.079Z"
+        },
+        "mx_04": {
+          "status": "verified",
+          "voiceId": "voice_lcamqelcbtvu",
+          "model": "gemini-3.8-flash-tts",
+          "durationSec": 11.28,
+          "charsPerSec": 11.6,
+          "updatedAt": "2026-10-17T17:12:36.079Z"
+        },
+        "mx_05": {
+          "status": "verified",
+          "voiceId": "voice_lcamqelcbtvu",
+          "model": "gemini-3.8-flash-tts",
+          "durationSec": 10.42,
+          "charsPerSec": 11.7,
+          "updatedAt": "2026-10-17T17:12:36.079Z"
+        },
+        "mx_06": {
+          "status": "verified",
+          "voiceId": "voice_lcamqelcbtvu",
+          "model": "gemini-3.8-flash-tts",
+          "durationSec": 7.74,
+          "charsPerSec": 14.6,
+          "updatedAt": "2026-10-17T17:12:36.080Z"
+        },
+        "mx_07": {
+          "status": "verified",
+          "voiceId": "voice_3nm6afp5o74w",
+          "model": "gemini-3.8-flash-tts",
+          "durationSec": 3.2,
+          "charsPerSec": 14.4,
+          "updatedAt": "2026-10-17T17:12:47.572Z"
+        },
+        "mx_08": {
+          "status": "verified",
+          "voiceId": "voice_lcamqelcbtvu",
+          "model": "gemini-3.8-flash-tts",
+          "durationSec": 16.02,
+          "charsPerSec": 10,
+          "updatedAt": "2026-10-17T17:12:36.080Z"
+        },
+        "mx_09": {
+          "status": "verified",
+          "voiceId": "voice_lcamqelcbtvu",
+          "model": "gemini-3.8-flash-tts",
+          "durationSec": 14.94,
+          "charsPerSec": 11.4,
+          "updatedAt": "2026-10-17T17:12:36.080Z"
+        },
+        "mx_10": {
+          "status": "verified",
+          "voiceId": "voice_lcamqelcbtvu",
+          "model": "gemini-3.8-flash-tts",
+          "durationSec": 13.82,
+          "charsPerSec": 10.7,
+          "updatedAt": "2026-10-17T17:12:36.080Z"
+        }
+      }
+    },
+    "ru": {
+      "voicedLines": [],
+      "verifiedLines": [],
+      "legacyLines": [],
+      "totalLines": 10,
+      "isComplete": false,
+      "isVerifiedComplete": false,
+      "lineRecords": {
+        "mx_01": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "mx_02": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "mx_03": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "mx_04": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "mx_05": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "mx_06": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "mx_07": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "mx_08": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "mx_09": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "mx_10": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        }
+      }
+    },
+    "de": {
+      "voicedLines": [
+        "mx_01",
+        "mx_02",
+        "mx_03",
+        "mx_04",
+        "mx_05",
+        "mx_06",
+        "mx_07",
+        "mx_08",
+        "mx_09",
+        "mx_10"
+      ],
+      "verifiedLines": [
+        "mx_01",
+        "mx_02",
+        "mx_03",
+        "mx_04",
+        "mx_05",
+        "mx_06",
+        "mx_07",
+        "mx_08",
+        "mx_09",
+        "mx_10"
+      ],
+      "legacyLines": [],
+      "totalLines": 10,
+      "isComplete": true,
+      "isVerifiedComplete": true,
+      "lineRecords": {
+        "mx_01": {
+          "status": "verified",
+          "voiceId": "voice_89jlxwsojvub",
+          "model": "gemini-3.8-flash-tts",
+          "durationSec": 7.92,
+          "charsPerSec": 9.5,
+          "updatedAt": "2026-10-17T17:14:33.049Z"
+        },
+        "mx_02": {
+          "status": "verified",
+          "voiceId": "voice_smyytgmy3juw",
+          "model": "gemini-3.8-flash-tts",
+          "durationSec": 2.52,
+          "charsPerSec": 16.7,
+          "updatedAt": "2026-10-17T17:14:04.469Z"
+        },
+        "mx_03": {
+          "status": "verified",
+          "voiceId": "voice_89jlxwsojvub",
+          "model": "gemini-3.8-flash-tts",
+          "durationSec": 6.64,
+          "charsPerSec": 9,
+          "updatedAt": "2026-10-17T17:14:33.049Z"
+        },
+        "mx_04": {
+          "status": "verified",
+          "voiceId": "voice_89jlxwsojvub",
+          "model": "gemini-3.8-flash-tts",
+          "durationSec": 10.2,
+          "charsPerSec": 15.5,
+          "updatedAt": "2026-10-17T17:14:33.049Z"
+        },
+        "mx_05": {
+          "status": "verified",
+          "voiceId": "voice_89jlxwsojvub",
+          "model": "gemini-3.8-flash-tts",
+          "durationSec": 10.62,
+          "charsPerSec": 11.7,
+          "updatedAt": "2026-10-17T17:14:33.049Z"
+        },
+        "mx_06": {
+          "status": "verified",
+          "voiceId": "voice_89jlxwsojvub",
+          "model": "gemini-3.8-flash-tts",
+          "durationSec": 6.5,
+          "charsPerSec": 16.8,
+          "updatedAt": "2026-10-17T17:14:33.050Z"
+        },
+        "mx_07": {
+          "status": "verified",
+          "voiceId": "voice_smyytgmy3juw",
+          "model": "gemini-3.8-flash-tts",
+          "durationSec": 3.32,
+          "charsPerSec": 12.7,
+          "updatedAt": "2026-10-17T17:14:04.469Z"
+        },
+        "mx_08": {
+          "status": "verified",
+          "voiceId": "voice_89jlxwsojvub",
+          "model": "gemini-3.8-flash-tts",
+          "durationSec": 6.38,
+          "charsPerSec": 25.5,
+          "updatedAt": "2026-10-17T17:14:33.050Z"
+        },
+        "mx_09": {
+          "status": "verified",
+          "voiceId": "voice_89jlxwsojvub",
+          "model": "gemini-3.8-flash-tts",
+          "durationSec": 18.78,
+          "charsPerSec": 9.3,
+          "updatedAt": "2026-10-17T17:14:33.050Z"
+        },
+        "mx_10": {
+          "status": "verified",
+          "voiceId": "voice_89jlxwsojvub",
+          "model": "gemini-3.8-flash-tts",
+          "durationSec": 13.16,
+          "charsPerSec": 13.8,
+          "updatedAt": "2026-10-17T17:14:33.050Z"
+        }
+      }
+    }
+  },
+  "pulp-fiction-ezekiel": {
+    "pt-PT": {
+      "voicedLines": [],
+      "verifiedLines": [],
+      "legacyLines": [],
+      "totalLines": 10,
+      "isComplete": false,
+      "isVerifiedComplete": false,
+      "lineRecords": {
+        "pf_01": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "pf_02": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "pf_03": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "pf_04": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "pf_05": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "pf_06": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "pf_07": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "pf_08": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "pf_09": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "pf_10": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        }
+      }
+    },
+    "en": {
+      "voicedLines": [],
+      "verifiedLines": [],
+      "legacyLines": [],
+      "totalLines": 10,
+      "isComplete": false,
+      "isVerifiedComplete": false,
+      "lineRecords": {
+        "pf_01": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "pf_02": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "pf_03": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "pf_04": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "pf_05": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "pf_06": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "pf_07": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "pf_08": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "pf_09": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "pf_10": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        }
+      }
+    },
+    "ru": {
+      "voicedLines": [],
+      "verifiedLines": [],
+      "legacyLines": [],
+      "totalLines": 10,
+      "isComplete": false,
+      "isVerifiedComplete": false,
+      "lineRecords": {
+        "pf_01": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "pf_02": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "pf_03": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "pf_04": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "pf_05": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "pf_06": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "pf_07": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "pf_08": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "pf_09": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "pf_10": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        }
+      }
+    },
+    "de": {
+      "voicedLines": [],
+      "verifiedLines": [],
+      "legacyLines": [],
+      "totalLines": 10,
+      "isComplete": false,
+      "isVerifiedComplete": false,
+      "lineRecords": {
+        "pf_01": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "pf_02": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "pf_03": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "pf_04": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "pf_05": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "pf_06": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "pf_07": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "pf_08": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "pf_09": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "pf_10": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        }
+      }
+    }
+  },
+  "lotr-black-gate": {
+    "pt-PT": {
+      "voicedLines": [],
+      "verifiedLines": [],
+      "legacyLines": [],
+      "totalLines": 8,
+      "isComplete": false,
+      "isVerifiedComplete": false,
+      "lineRecords": {
+        "lotr_01": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "lotr_02": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "lotr_03": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "lotr_04": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "lotr_05": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "lotr_06": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "lotr_07": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "lotr_08": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        }
+      }
+    },
+    "en": {
+      "voicedLines": [],
+      "verifiedLines": [],
+      "legacyLines": [],
+      "totalLines": 8,
+      "isComplete": false,
+      "isVerifiedComplete": false,
+      "lineRecords": {
+        "lotr_01": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "lotr_02": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "lotr_03": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "lotr_04": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "lotr_05": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "lotr_06": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "lotr_07": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "lotr_08": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        }
+      }
+    },
+    "ru": {
+      "voicedLines": [],
+      "verifiedLines": [],
+      "legacyLines": [],
+      "totalLines": 8,
+      "isComplete": false,
+      "isVerifiedComplete": false,
+      "lineRecords": {
+        "lotr_01": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "lotr_02": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "lotr_03": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "lotr_04": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "lotr_05": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "lotr_06": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "lotr_07": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "lotr_08": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        }
+      }
+    },
+    "de": {
+      "voicedLines": [],
+      "verifiedLines": [],
+      "legacyLines": [],
+      "totalLines": 8,
+      "isComplete": false,
+      "isVerifiedComplete": false,
+      "lineRecords": {
+        "lotr_01": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "lotr_02": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "lotr_03": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "lotr_04": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "lotr_05": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "lotr_06": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "lotr_07": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "lotr_08": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        }
+      }
+    }
+  },
+  "harry-potter-welcome": {
+    "pt-PT": {
+      "voicedLines": [
+        "hp_01",
+        "hp_02",
+        "hp_03",
+        "hp_04",
+        "hp_05",
+        "hp_06",
+        "hp_07",
+        "hp_08"
+      ],
+      "verifiedLines": [
+        "hp_01",
+        "hp_02",
+        "hp_03",
+        "hp_04",
+        "hp_05",
+        "hp_06",
+        "hp_07",
+        "hp_08"
+      ],
+      "legacyLines": [],
+      "totalLines": 8,
+      "isComplete": true,
+      "isVerifiedComplete": true,
+      "lineRecords": {
+        "hp_01": {
+          "status": "verified",
+          "voiceId": "voice_nuqj6mzmcvgi",
+          "model": "gemini-3.8-flash-tts",
+          "durationSec": 6.06,
+          "charsPerSec": 8.1,
+          "updatedAt": "2026-10-17T17:16:59.260Z"
+        },
+        "hp_02": {
+          "status": "verified",
+          "voiceId": "voice_nuqj6mzmcvgi",
+          "model": "gemini-3.8-flash-tts",
+          "durationSec": 6.34,
+          "charsPerSec": 10.4,
+          "updatedAt": "2026-10-17T17:16:59.260Z"
+        },
+        "hp_03": {
+          "status": "verified",
+          "voiceId": "voice_nuqj6mzmcvgi",
+          "model": "gemini-3.8-flash-tts",
+          "durationSec": 10,
+          "charsPerSec": 11.9,
+          "updatedAt": "2026-10-17T17:16:59.261Z"
+        },
+        "hp_04": {
+          "status": "verified",
+          "voiceId": "voice_nuqj6mzmcvgi",
+          "model": "gemini-3.8-flash-tts",
+          "durationSec": 8.7,
+          "charsPerSec": 10.9,
+          "updatedAt": "2026-10-17T17:16:59.261Z"
+        },
+        "hp_05": {
+          "status": "verified",
+          "voiceId": "voice_nuqj6mzmcvgi",
+          "model": "gemini-3.8-flash-tts",
+          "durationSec": 6.5,
+          "charsPerSec": 10.5,
+          "updatedAt": "2026-10-17T17:16:59.261Z"
+        },
+        "hp_06": {
+          "status": "verified",
+          "voiceId": "voice_nuqj6mzmcvgi",
+          "model": "gemini-3.8-flash-tts",
+          "durationSec": 7.88,
+          "charsPerSec": 10.4,
+          "updatedAt": "2026-10-17T17:16:59.261Z"
+        },
+        "hp_07": {
+          "status": "verified",
+          "voiceId": "voice_nuqj6mzmcvgi",
+          "model": "gemini-3.8-flash-tts",
+          "durationSec": 12,
+          "charsPerSec": 9.3,
+          "updatedAt": "2026-10-17T17:16:59.261Z"
+        },
+        "hp_08": {
+          "status": "verified",
+          "voiceId": "voice_nuqj6mzmcvgi",
+          "model": "gemini-3.8-flash-tts",
+          "durationSec": 3.8,
+          "charsPerSec": 10,
+          "updatedAt": "2026-10-17T17:16:59.261Z"
+        }
+      }
+    },
+    "en": {
+      "voicedLines": [
+        "hp_01",
+        "hp_02",
+        "hp_03",
+        "hp_04",
+        "hp_05",
+        "hp_06",
+        "hp_07",
+        "hp_08"
+      ],
+      "verifiedLines": [
+        "hp_01",
+        "hp_02",
+        "hp_03",
+        "hp_04",
+        "hp_05",
+        "hp_06",
+        "hp_07",
+        "hp_08"
+      ],
+      "legacyLines": [],
+      "totalLines": 8,
+      "isComplete": true,
+      "isVerifiedComplete": true,
+      "lineRecords": {
+        "hp_01": {
+          "status": "verified",
+          "voiceId": "voice_zqmc7d3kow9h",
+          "model": "gemini-3.8-flash-tts",
+          "durationSec": 3.96,
+          "charsPerSec": 10.9,
+          "updatedAt": "2026-10-17T17:17:27.118Z"
+        },
+        "hp_02": {
+          "status": "verified",
+          "voiceId": "voice_zqmc7d3kow9h",
+          "model": "gemini-3.8-flash-tts",
+          "durationSec": 6.62,
+          "charsPerSec": 8.2,
+          "updatedAt": "2026-10-17T17:17:27.118Z"
+        },
+        "hp_03": {
+          "status": "verified",
+          "voiceId": "voice_zqmc7d3kow9h",
+          "model": "gemini-3.8-flash-tts",
+          "durationSec": 6.26,
+          "charsPerSec": 13.4,
+          "updatedAt": "2026-10-17T17:17:27.118Z"
+        },
+        "hp_04": {
+          "status": "verified",
+          "voiceId": "voice_zqmc7d3kow9h",
+          "model": "gemini-3.8-flash-tts",
+          "durationSec": 6.18,
+          "charsPerSec": 12.9,
+          "updatedAt": "2026-10-17T17:17:27.118Z"
+        },
+        "hp_05": {
+          "status": "verified",
+          "voiceId": "voice_zqmc7d3kow9h",
+          "model": "gemini-3.8-flash-tts",
+          "durationSec": 5.78,
+          "charsPerSec": 11.2,
+          "updatedAt": "2026-10-17T17:17:27.118Z"
+        },
+        "hp_06": {
+          "status": "verified",
+          "voiceId": "voice_zqmc7d3kow9h",
+          "model": "gemini-3.8-flash-tts",
+          "durationSec": 5.26,
+          "charsPerSec": 14.1,
+          "updatedAt": "2026-10-17T17:17:27.118Z"
+        },
+        "hp_07": {
+          "status": "verified",
+          "voiceId": "voice_zqmc7d3kow9h",
+          "model": "gemini-3.8-flash-tts",
+          "durationSec": 9.68,
+          "charsPerSec": 10.1,
+          "updatedAt": "2026-10-17T17:17:27.118Z"
+        },
+        "hp_08": {
+          "status": "verified",
+          "voiceId": "voice_zqmc7d3kow9h",
+          "model": "gemini-3.8-flash-tts",
+          "durationSec": 3.06,
+          "charsPerSec": 10.1,
+          "updatedAt": "2026-10-17T17:17:27.118Z"
+        }
+      }
+    },
+    "ru": {
+      "voicedLines": [],
+      "verifiedLines": [],
+      "legacyLines": [],
+      "totalLines": 8,
+      "isComplete": false,
+      "isVerifiedComplete": false,
+      "lineRecords": {
+        "hp_01": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "hp_02": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "hp_03": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "hp_04": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "hp_05": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "hp_06": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "hp_07": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "hp_08": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        }
+      }
+    },
+    "de": {
+      "voicedLines": [],
+      "verifiedLines": [],
+      "legacyLines": [],
+      "totalLines": 8,
+      "isComplete": false,
+      "isVerifiedComplete": false,
+      "lineRecords": {
+        "hp_01": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "hp_02": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "hp_03": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "hp_04": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "hp_05": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "hp_06": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "hp_07": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        },
+        "hp_08": {
+          "status": "missing",
+          "voiceId": "none",
+          "model": "gemini-3.8-flash-tts"
+        }
+      }
+    }
+  }
+}
